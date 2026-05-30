@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* 1. تعريف الثيم (Theme) لـ Tailwind v4 */
+@theme {
+  --color-mozo-dark: #0A0B2E;
+  --color-mozo-purple: #9171f8;
+  --color-mozo-purple-glow: #1a1a4b;
+  --color-mozo-pink: #e61a6a;
+  --color-mozo-orange: #ff6b00;
+}
+
+/* 2. الإعدادات الأساسية (Base Styles) */
+@layer base {
+  body {
+    background-color: var(--color-mozo-dark);
+    color: white;
+    margin: 0;
+    font-family: var(--font-cairo), sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* تخصيص لون التحديد (Selection) */
+  ::selection {
+    background-color: var(--color-mozo-purple);
+    color: white;
+  }
+}
+
+/* 3. المكونات المخصصة (Components) */
+@layer components {
+  /* تأثير الزجاج (Glassmorphism) للكروت */
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* تأثير الإضاءة في الخلفية (Glow Effect) */
+  .bg-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 80% 20%, rgba(230, 26, 106, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 20% 80%, rgba(145, 113, 248, 0.15) 0%, transparent 40%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+/* 4. الأنيميشن */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
