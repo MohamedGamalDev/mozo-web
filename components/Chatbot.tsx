@@ -134,7 +134,7 @@ export default function Chatbot() {
             exit={{ opacity: 0, y: 50, scale: 0.95 }} 
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
            
-            className="fixed bottom-28 right-4 w-[380px] h-[500px] bg-[#0c0b16]/90 backdrop-blur-2xl border border-white/10 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-[90] flex flex-col overflow-hidden"
+            className="fixed bottom-28 right-2 w-[380px] h-[500px] bg-[#0c0b16]/90 backdrop-blur-2xl border border-white/10 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-[90] flex flex-col overflow-hidden"
           >
             {/* الهيدر المطور بتأثير التدرج واللمعان الداكن */}
             <div className="bg-gradient-to-r from-[#815bf5] via-[#9171f8] to-[#ff6e00] p-4 text-white flex justify-between items-center border-b border-white/5 shadow-md">
